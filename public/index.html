@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f7f5" />
+    <title>Gemini AI Chatbot</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <main class="layout">
+      <aside class="sidebar" aria-label="Chat navigation">
+        <a class="brand" href="/" aria-label="Gemini AI Chatbot home"><span class="brand-mark">✳</span><span>Gemini</span></a>
+        <button id="new-chat" class="new-chat" type="button"><span>＋</span> New chat</button>
+        <div class="sidebar-caption">YOUR SPACE</div>
+        <div class="sidebar-current"><span class="current-dot"></span><span>Current conversation</span></div>
+        <div class="sidebar-footer"><span class="status-dot"></span> Ready when you are</div>
+      </aside>
+      <div class="workspace">
+        <header class="topbar">
+          <div class="page-label"><span class="page-eyebrow">GEMINI AI</span><span>Conversation</span></div>
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch appearance"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Appearance</span></button>
+        </header>
+        <section class="chat-shell" aria-label="Chat with Gemini">
+          <div id="messages" class="messages" aria-live="polite"></div>
+          <form id="chat-form" class="composer">
+            <label class="sr-only" for="prompt">Message Gemini</label>
+            <textarea id="prompt" rows="1" maxlength="8000" placeholder="Ask anything…" required></textarea>
+            <div class="composer-bottom">
+              <span class="hint">Enter to send <span class="hint-divider">·</span> Shift + Enter for a new line</span>
+              <button id="send" class="send-button" type="submit" aria-label="Send message">↑</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
