@@ -1,2 +1,2 @@
-import { Workshop } from "./demo";
-new Workshop().student()
+import { Workshop } from "./demo.js";
+new Workshop().student();
